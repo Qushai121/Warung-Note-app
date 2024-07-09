@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Warung Stock</string>
+    <string name="item_stock_pricing_note">Item Stock Pricing Note</string>
+    <string name="stock_pricing_note">Stock Pricing Note</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="warung_note_management_system">Warung Note Management System</string>
+    <string name="build_by_qushai">build by Qushai</string>
+    <string name="warung_note_logo">Warung Note Logo</string>
+    <string name="detail_item_pricing">Detail Item Pricing</string>
+    <string name="small_package_pricing">Small Package Pricing</string>
+</resources>
