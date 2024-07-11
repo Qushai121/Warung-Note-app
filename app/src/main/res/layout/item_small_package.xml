@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-    android:layout_marginHorizontal="10dp"
-    >
+    android:layout_width="wrap_content"
+    android:layout_height="20dp"
+    app:cardCornerRadius="20dp"
+    android:layout_marginEnd="10dp"
+    app:cardBackgroundColor="@color/md_theme_primaryContainer_highContrast">
 
-    <TextView
-        android:id="@+id/textView_small_packaged_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="1 pcs"
-        android:layout_marginEnd="10dp"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="10dp"
+        >
 
+        <TextView
+            android:id="@+id/textView_small_packaged_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textColor="@android:color/white"
+            tools:text="1 pcs" />
 
-    <TextView
-        android:id="@+id/textView_small_packaged_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="10.000"
-        />
+        <TextView
+            android:id="@+id/textView_small_packaged_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            tools:text="Rp.10.000" />
+    </LinearLayout>
 
-</LinearLayout>
+</androidx.cardview.widget.CardView>

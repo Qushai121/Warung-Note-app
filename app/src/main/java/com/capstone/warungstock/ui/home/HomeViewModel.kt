@@ -38,7 +38,6 @@ class HomeViewModel : ViewModel() {
                 )
                 copyToRealm(itemStock,UpdatePolicy.ALL)
                 copyToRealm(itemstock2,UpdatePolicy.ALL)
-
             }
         }
 

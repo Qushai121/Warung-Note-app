@@ -50,4 +50,11 @@
     </style>
 
     <style name="Theme.WarungStock" parent="Base.Theme.WarungStock" />
+
+    <style name="HomeSearchBar" parent="ShapeAppearanceOverlay.Material3.SearchBar" >
+        <item name="background">@drawable/bg_home_search_bar</item>
+    </style>
+
+
+
 </resources>

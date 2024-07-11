@@ -9,5 +9,14 @@
         android:id="@+id/homeFragment"
         android:name="com.capstone.warungstock.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailStockPricingNoteFragment"
+            app:destination="@id/detailStockPricingNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailStockPricingNoteFragment"
+        android:name="com.capstone.warungstock.ui.DetailStockPricingNote.DetailStockPricingNoteFragment"
+        android:label="fragment_detail_stock_pricing_note"
+        tools:layout="@layout/fragment_detail_stock_pricing_note" />
 </navigation>
