@@ -25,6 +25,7 @@ class SplashScreenActivity : AppCompatActivity() {
             delay(2_000)
             val intent = Intent(this@SplashScreenActivity,MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }

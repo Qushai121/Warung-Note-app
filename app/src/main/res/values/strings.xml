@@ -14,4 +14,15 @@
     <string name="search">Search...</string>
     <string name="search_bar">Search Bar</string>
     <string name="add_new_stock_pricing_note">Add New Stock Pricing Note</string>
+    <string name="form_add_stock_pricing">Form Add Stock Pricing</string>
+    <string name="input_label">Input Label</string>
+    <string name="small_package_name">Small Package Name</string>
+    <string name="small_package_price">Small Package Price</string>
+    <string name="add">Add +</string>
+    <string name="caution">Caution</string>
+    <string name="stock_pricing_delete_caution_description">Be careful to using delete, this will be deleted forever if you just wanna delete some small package click cancel and find edit button.</string>
+    <string name="are_you_sure_want_to_delete_this">Are you sure want to delete this ?</string>
+    <string name="cancel">Cancel</string>
+    <string name="success">Success</string>
+    <string name="something_wrong">Something Wrong</string>
 </resources>

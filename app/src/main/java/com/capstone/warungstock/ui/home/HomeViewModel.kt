@@ -13,35 +13,35 @@ import kotlinx.coroutines.launch
 
 class HomeViewModel : ViewModel() {
 
-    init {
-        viewModelScope.launch {
-            RealmConfig.realm.write {
-                val itemStock = ItemStock().apply {
-                    itemname = "Rinso"
-                }
-                val itemstock2 = ItemStock().apply {
-                    itemname = "Bumbu Racik"
-                }
-                val smallPackage1 = SmallPackage().apply {
-                    packagename = "1 pcs"
-                    packageprice = 1_000
-                }
-                val smallPackage2 = SmallPackage().apply {
-                    packagename = "10 pcs"
-                    packageprice = 9_000
-                }
-                itemStock.smalPackages?.addAll(
-                    realmListOf(
-                        smallPackage1,
-                        smallPackage2
-                    )
-                )
-                copyToRealm(itemStock,UpdatePolicy.ALL)
-                copyToRealm(itemstock2,UpdatePolicy.ALL)
-            }
-        }
-
-    }
+//    init {
+//        viewModelScope.launch {
+//            RealmConfig.realm.write {
+//                val itemStock = ItemStock().apply {
+//                    itemname = "Rinso"
+//                }
+//                val itemstock2 = ItemStock().apply {
+//                    itemname = "Bumbu Racik"
+//                }
+//                val smallPackage1 = SmallPackage().apply {
+//                    packagename = "1 pcs"
+//                    packageprice = 1_000
+//                }
+//                val smallPackage2 = SmallPackage().apply {
+//                    packagename = "10 pcs"
+//                    packageprice = 9_000
+//                }
+//                itemStock.smalPackages?.addAll(
+//                    realmListOf(
+//                        smallPackage1,
+//                        smallPackage2
+//                    )
+//                )
+//                copyToRealm(itemStock, UpdatePolicy.ALL)
+//                copyToRealm(itemstock2,UpdatePolicy.ALL)
+//            }
+//        }
+//
+//    }
 
     val getItemStock = liveData{
         val datas = RealmConfig.realm.query<ItemStock>().find()

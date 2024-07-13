@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:maxWidth="150dp"
-            app:cardBackgroundColor="@color/md_theme_tertiary_mediumContrast"
+            app:cardBackgroundColor="@color/md_theme_primaryContainer_highContrast"
             app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="end"
                 android:paddingHorizontal="10dp"
-                android:textColor="@color/md_theme_onTertiary"
+                android:textColor="@color/md_theme_onPrimary"
                 tools:text="Rp 10.000" />
 
         </androidx.cardview.widget.CardView>

@@ -13,10 +13,21 @@
         <action
             android:id="@+id/action_homeFragment_to_detailStockPricingNoteFragment"
             app:destination="@id/detailStockPricingNoteFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_formAddStockPricingFragment"
+            app:destination="@id/formAddStockPricingFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailStockPricingNoteFragment"
-        android:name="com.capstone.warungstock.ui.DetailStockPricingNote.DetailStockPricingNoteFragment"
+        android:name="com.capstone.warungstock.ui.detailStockPricingNote.DetailStockPricingNoteFragment"
         android:label="fragment_detail_stock_pricing_note"
-        tools:layout="@layout/fragment_detail_stock_pricing_note" />
+        tools:layout="@layout/fragment_detail_stock_pricing_note" >
+        <argument android:name="id_stockItemPricing"
+             app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/formAddStockPricingFragment"
+        android:name="com.capstone.warungstock.ui.stockPricingNoteForm.FormAddStockPricingFragment"
+        android:label="fragment_form_add_stock_pricing"
+        tools:layout="@layout/fragment_form_add_stock_pricing" />
 </navigation>

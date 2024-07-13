@@ -17,7 +17,7 @@
         <Constraint
             android:id="@+id/imageView"
             motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="50dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintVertical_bias="1"
@@ -50,11 +50,11 @@
         <Constraint
             android:id="@+id/imageView"
             motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="50dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintVertical_bias="0.300"
-            motion:layout_constraintHorizontal_bias="0.498"
+            motion:layout_constraintVertical_bias="0.427"
+            motion:layout_constraintHorizontal_bias="0.0"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             android:alpha="1" />

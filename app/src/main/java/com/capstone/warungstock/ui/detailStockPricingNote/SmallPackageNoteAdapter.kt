@@ -1,4 +1,4 @@
-package com.capstone.warungstock.ui.DetailStockPricingNote
+package com.capstone.warungstock.ui.detailStockPricingNote
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

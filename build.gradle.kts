@@ -4,3 +4,11 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     id("io.realm.kotlin") version "1.16.0" apply false
 }
+buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+        classpath(libs.androidx.navigation.safe.args.gradle.plugin)
+    }
+}

@@ -16,6 +16,7 @@ class StockPricingNoteAdapter : ListAdapter<ItemStock, StockPricingNoteAdapter.V
 
     interface AddNewListener{
         fun setSmallPackageNestedRecylerView( item : ItemStock,binding: ItemStockPricingNoteBinding )
+        fun setOnCLickListener(item : ItemStock,binding: ItemStockPricingNoteBinding)
     }
 
     fun setNewListener(newListener : AddNewListener){
@@ -26,8 +27,13 @@ class StockPricingNoteAdapter : ListAdapter<ItemStock, StockPricingNoteAdapter.V
         fun bind(item: ItemStock) {
             with(binding){
                 textViewItemStockPricingName.text = item.itemname
+                cardViewItemStockPricingNote.setOnClickListener {
+                    newListener?.setOnCLickListener(item,binding)
+                }
             }
-            newListener?.setSmallPackageNestedRecylerView(item,binding)
+            if (item.smalPackages != null){
+                newListener?.setSmallPackageNestedRecylerView(item,binding)
+            }
         }
 
     }

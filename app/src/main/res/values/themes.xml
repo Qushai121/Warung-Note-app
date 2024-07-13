@@ -49,11 +49,10 @@
         <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest</item>
     </style>
 
-    <style name="Theme.WarungStock" parent="Base.Theme.WarungStock" />
-
-    <style name="HomeSearchBar" parent="ShapeAppearanceOverlay.Material3.SearchBar" >
-        <item name="background">@drawable/bg_home_search_bar</item>
+    <style name="Theme.WarungStock" parent="Base.Theme.WarungStock" >
+        <item name="android:statusBarColor">@color/md_theme_primaryContainer_highContrast</item>
     </style>
+
 
 
 

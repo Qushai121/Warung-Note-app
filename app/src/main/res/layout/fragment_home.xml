@@ -9,8 +9,8 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_search"
         android:layout_width="0dp"
-        android:layout_marginTop="40dp"
         android:layout_height="48dp"
+        android:layout_marginTop="40dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
@@ -25,8 +25,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/search"
-                app:backgroundTint="@null"
                 android:padding="0dp"
+                app:backgroundTint="@null"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +35,15 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.search.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -61,15 +70,16 @@
         tools:listitem="@layout/item_stock_pricing_note" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/md_theme_tertiary"
         android:contentDescription="@string/add_new_stock_pricing_note"
         android:src="@drawable/ic_add"
-        android:backgroundTint="@color/md_theme_tertiary"
-        app:tint="@color/md_theme_onTertiary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/recylerView_stock_pricing_note" />
+        app:layout_constraintEnd_toEndOf="@+id/recylerView_stock_pricing_note"
+        app:tint="@color/md_theme_onTertiary" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_left"
