@@ -5,10 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.DialogFragment
 import com.capstone.warungstock.R
 import com.capstone.warungstock.databinding.FragmentErrorDialogBinding
 
-class ErrorDialogFragment : Fragment() {
+class ErrorDialogFragment : DialogFragment() {
 
     lateinit var binding : FragmentErrorDialogBinding
 
@@ -16,6 +17,7 @@ class ErrorDialogFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent)
         binding = FragmentErrorDialogBinding.inflate(inflater,container,false)
         return binding.root
     }

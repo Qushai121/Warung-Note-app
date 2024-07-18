@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/are_you_sure_want_to_delete_this"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="@+id/textView8"
@@ -71,6 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             app:contentPadding="10dp"
+            app:cardBackgroundColor="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9"
@@ -78,6 +79,7 @@
             app:strokeColor="@color/md_theme_tertiary">
 
             <TextView
+                android:id="@+id/textView_item_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
@@ -86,12 +88,12 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButton"
+            android:id="@+id/btn_delete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:foregroundTint="@color/md_theme_onTertiary"
-            android:text="@string/cancel"
+            android:text="@string/delete"
             app:backgroundTint="@color/md_theme_tertiary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -99,6 +101,7 @@
             app:shapeAppearance="?attr/shapeAppearanceCornerExtraSmall" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -107,10 +110,8 @@
             app:backgroundTint="@color/md_theme_tertiary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/materialButton"
+            app:layout_constraintTop_toBottomOf="@+id/btn_delete"
             app:shapeAppearance="?attr/shapeAppearanceCornerExtraSmall" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
