@@ -1,5 +1,7 @@
 package com.capstone.warungstock.ui.stockPricingNoteForm
 
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -12,7 +14,34 @@ class SmallPackageFormAdapter : ListAdapter<SmallPackage,SmallPackageFormAdapter
     inner class ViewHolder(val binding : ItemSmallPackageForFormBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: SmallPackage) {
             with(binding){
+                textInputName.setText(item.packagename.toString())
+                textInputPrice.setText(item.packageprice.toString())
+                textInputName.addTextChangedListener(object : TextWatcher {
+                    override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                    }
 
+                    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                    }
+
+                    override fun afterTextChanged(text: Editable?) {
+                        item.packagename = text.toString()
+                    }
+                })
+                textInputPrice.addTextChangedListener(object : TextWatcher {
+                    override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                    }
+
+                    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                    }
+
+                    override fun afterTextChanged(text: Editable?) {
+                        if (text.isNullOrBlank()){
+                            item.packageprice = 0
+                        }else{
+                            item.packageprice = text.toString().toInt()
+                        }
+                    }
+                })
             }
         }
 

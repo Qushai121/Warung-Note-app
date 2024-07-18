@@ -25,4 +25,6 @@
     <string name="cancel">Cancel</string>
     <string name="success">Success</string>
     <string name="something_wrong">Something Wrong</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
 </resources>

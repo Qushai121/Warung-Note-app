@@ -24,10 +24,61 @@
         tools:layout="@layout/fragment_detail_stock_pricing_note" >
         <argument android:name="id_stockItemPricing"
              app:argType="string"/>
+        <action
+            android:id="@+id/action_detailStockPricingNoteFragment_to_editItemStockBottomSheetFragment"
+            app:destination="@id/editItemStockBottomSheetFragment" />
+        <action
+            android:id="@+id/action_detailStockPricingNoteFragment_to_deleteItemConfirmationDialogFragment"
+            app:destination="@id/deleteItemConfirmationDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/formAddStockPricingFragment"
-        android:name="com.capstone.warungstock.ui.stockPricingNoteForm.FormAddStockPricingFragment"
+        android:name="com.capstone.warungstock.ui.stockPricingNoteForm.add.FormAddStockPricingFragment"
         android:label="fragment_form_add_stock_pricing"
         tools:layout="@layout/fragment_form_add_stock_pricing" />
+    <fragment
+        android:id="@+id/formEditStockPricingFragment"
+        android:name="com.capstone.warungstock.ui.stockPricingNoteForm.edit.FormEditStockPricingFragment"
+        android:label="fragment_form_edit_stock_pricing"
+        tools:layout="@layout/fragment_form_edit_stock_pricing" >
+        <argument
+            android:name="id_stockItemPricing"
+            app:argType="string" />
+    </fragment>
+    <dialog
+        android:id="@+id/editItemStockBottomSheetFragment"
+        android:name="com.capstone.warungstock.ui.dialog.EditItemStockBottomSheetFragment"
+        android:label="fragment_edit_item_stock_bottom_sheet"
+        tools:layout="@layout/fragment_edit_item_stock_bottom_sheet" >
+        <action
+            android:id="@+id/action_editItemStockBottomSheetFragment_to_formEditStockPricingFragment"
+            app:destination="@id/formEditStockPricingFragment" />
+        <action
+            android:id="@+id/action_editItemStockBottomSheetFragment_to_deleteItemConfirmationDialogFragment"
+            app:destination="@id/deleteItemConfirmationDialogFragment" />
+        <argument
+            android:name="id_stockItemPricing"
+            app:argType="string" />
+        <argument
+            android:name="stockItemName"
+            app:argType="string" />
+    </dialog>
+    <dialog
+        android:id="@+id/deleteItemConfirmationDialogFragment"
+        android:name="com.capstone.warungstock.ui.dialog.DeleteItemConfirmationDialogFragment"
+        android:label="fragment_delete_item_confirmation_dialog"
+        tools:layout="@layout/fragment_delete_item_confirmation_dialog" >
+        <argument
+            android:name="stockItemName"
+            app:argType="string" />
+        <argument
+            android:name="id_stockItemPricing"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_deleteItemConfirmationDialogFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="true"
+            />
+    </dialog>
 </navigation>

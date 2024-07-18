@@ -15,6 +15,7 @@ class SuccessDialogFragment : DialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent)
         binding = FragmentSuccessDialogBinding.inflate(inflater,container,false)
         return binding.root
     }

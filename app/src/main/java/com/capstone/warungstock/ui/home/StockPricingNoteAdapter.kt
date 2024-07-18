@@ -1,5 +1,6 @@
 package com.capstone.warungstock.ui.home
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -32,6 +33,7 @@ class StockPricingNoteAdapter : ListAdapter<ItemStock, StockPricingNoteAdapter.V
                 }
             }
             if (item.smalPackages != null){
+                Log.i("datas search adapter",item.itemname.toString())
                 newListener?.setSmallPackageNestedRecylerView(item,binding)
             }
         }

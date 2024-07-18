@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("io.realm.kotlin")
     id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -40,10 +42,17 @@ android {
         viewBinding = true
 
     }
+}
 
+kapt {
+    correctErrorTypes = true
 }
 
 dependencies {
+//    Digger & Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+
 //    Circular Image
     implementation(libs.circleimageview)
 

@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.stockPricingNoteForm.add.FormAddStockPricingFragment">
+    tools:context=".ui.stockPricingNoteForm.edit.FormEditStockPricingFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/my_toolbar"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_chevron_left"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:title="@string/form_add_stock_pricing"
+        app:title="Form Edit Stock Pricing"
         app:titleCentered="true"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium" />
 
